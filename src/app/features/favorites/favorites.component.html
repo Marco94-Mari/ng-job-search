@@ -1,0 +1,26 @@
+<ng-container *ngIf="data.length > 0; else noFavorites">
+  <div class="row" *ngFor="let job of data">
+    <div class="col-sm-1 img-container">
+      <img [src]="job.companyLogo" [alt]="job.companyName" />
+    </div>
+    <div class="col-sm-11">
+      <div class="row">
+        <div class="col-sm">
+          <a class="job-title" routerLink="/jobs/{{ job.id }}">
+            <strong>{{ job.title }}</strong>
+          </a>
+        </div>
+      </div>
+      <div class="row">
+        <p>Company: {{ job.companyName }} Reference: {{ job.reference }}</p>
+      </div>
+    </div>
+  </div>
+</ng-container>
+<ng-template #noFavorites>
+  <div class="row">
+    <div class="col-sm">
+      <h4 class="no-content">No Favorite Selected</h4>
+    </div>
+  </div>
+</ng-template>

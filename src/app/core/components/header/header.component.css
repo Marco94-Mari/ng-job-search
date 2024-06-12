@@ -1,0 +1,21 @@
+.title {
+  text-align: center;
+}
+.item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  margin: 0;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+.item:not(.active):hover {
+  background-color: #e5e9f1;
+  color: #3a4252;
+}
+.active {
+  background-color: #3a4252;
+  color: white;
+}

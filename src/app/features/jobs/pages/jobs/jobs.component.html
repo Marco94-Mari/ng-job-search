@@ -1,0 +1,25 @@
+<div class="row" *ngFor="let job of data$ | async">
+  <div class="col-sm-1 img-container">
+    <img [src]="job.companyLogo" [alt]="job.companyName" />
+  </div>
+  <div class="col-sm-10">
+    <div class="row">
+      <div class="col-sm">
+        <a class="job-title" routerLink="/jobs/{{ job.id }}">
+          <strong>{{ job.title }}</strong>
+        </a>
+      </div>
+    </div>
+    <div class="row">
+      <p>Company: {{ job.companyName }} Reference: {{ job.reference }}</p>
+    </div>
+  </div>
+  <div class="col-sm-1 icon-container">
+    <span
+      id="star-{{ job.id }}"
+      class="icon-star"
+      [class.active]="isAmongFavorites(job)"
+      (click)="toggleFavorite(job)"
+    ></span>
+  </div>
+</div>

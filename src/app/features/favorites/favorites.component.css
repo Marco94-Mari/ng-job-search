@@ -1,0 +1,30 @@
+.img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.img-container img {
+    max-width: 50px;
+    max-height: 50px;
+    object-fit: cover;
+}
+.job-title {
+    color: black;
+    font-size: 15px;
+    font-weight: bold;
+}
+.job-title:hover {
+    text-decoration: underline;
+}
+p {
+    font-size: 10px;
+}
+.icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.no-content {
+    text-align: center;
+}

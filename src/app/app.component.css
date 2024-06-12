@@ -1,0 +1,9 @@
+.app-container {
+  max-width: 60%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.content {
+  margin-top: 10px;
+  width: 100%;
+}
