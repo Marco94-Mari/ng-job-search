@@ -31,7 +31,7 @@ export class JobDetailComponent implements OnInit {
     });
   }
 
-  fetchData(jobId: Number): void {
+  fetchData(jobId: number): void {
     this.data$ = this._jobsService.fetchJob(jobId);
   }
 }

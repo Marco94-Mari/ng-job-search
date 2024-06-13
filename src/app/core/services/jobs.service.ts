@@ -20,7 +20,7 @@ export class JobsService {
   fetchAllJobs(): Observable<Job[]> {
     return this.http.get<Job[]>(this.jobsUrl);
   }
-  fetchJob(jobId: Number): Observable<JobDetail> {
+  fetchJob(jobId: number): Observable<JobDetail> {
     return this.http.get<JobDetail>(`${this.jobsUrl}/${jobId}`);
   }
   manageFavorites(job: Job): void {
